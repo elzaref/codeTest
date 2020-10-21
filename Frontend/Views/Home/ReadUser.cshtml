@@ -1,0 +1,92 @@
+﻿@model DomainModels.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="widivh=device-widivh" />
+    <title>User Details</title>
+    <link rel="stylesheet" href="~/css/listuerssyle.css" />
+</head>
+<body>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <div class="row">
+        <div class="fullwidivh">
+            <div class="halfwidivh">
+                <div class="firstcolumn">
+                    @Html.DisplayNameFor(model => model.Id)
+                </div>
+                <div class="secondcolumn">
+                    @Html.DisplayFor(model => model.Id)
+                </div>
+                <div class="firstcolumn">
+                    @Html.DisplayNameFor(model => model.Name)
+                </div>
+                <div class="secondcolumn">
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+                <div class="firstcolumn">
+                    @Html.DisplayNameFor(model => model.UserName)
+                </div>
+                <div class="secondcolumn">
+                    @Html.DisplayFor(model => model.UserName)
+                </div>
+                <div class="firstcolumn">
+                    @Html.DisplayNameFor(model => model.Email)
+                </div>
+                <div class="secondcolumn">
+                    @Html.DisplayFor(model => model.Email)
+                </div>
+                <div class="firstcolumn">
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </div>
+                <div class="secondcolumn">
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </div>
+            </div>
+            <div class="halfwidivh">
+                <div class="firstcolumn">
+                    @Html.DisplayNameFor(model => model.Address)
+                </div>
+                <div class="secondcolumn">
+                    @Html.DisplayFor(model => model.Address)
+                </div>
+                <div class="firstcolumn">
+                    @Html.DisplayNameFor(model => model.CreatedAt)
+                </div>
+                <div class="secondcolumn">
+                    @Html.DisplayFor(model => model.CreatedAt)
+                </div>
+                <div class="firstcolumn">
+                    @Html.DisplayNameFor(model => model.AddedAt)
+                </div>
+                <div class="secondcolumn">
+                    @Html.DisplayFor(model => model.AddedAt)
+                </div>
+                <div class="firstcolumn">
+                    @Html.DisplayNameFor(model => model.ModifiedAt)
+                </div>
+                <div class="secondcolumn">
+                    @Html.DisplayFor(model => model.ModifiedAt)
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Edit", "UpdateForm", "Home", new { id = Model.Id }) |
+    <a asp-action="Index"class="button">Back to List</a>
+</div>
+</body>
+</html>

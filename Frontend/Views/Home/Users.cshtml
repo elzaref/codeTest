@@ -1,0 +1,44 @@
+﻿@using DomainModels.Models.ViewModels
+@model UsersViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+    <link rel="stylesheet" href="~/css/listuerssyle.css" />
+
+    <div class="text-center">
+        <h1 class="display-12">Users</h1>
+        <div>@Html.ActionLink("Create", "CreateForm", "Home")
+        <table class="userslist">
+            <thead class="display-12">
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>E-mail</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Options</th>
+
+                </tr>
+            </thead>
+            <tbody class="display-12">
+                @foreach (var user in Model.Users)
+                {
+                    <tr class="user" data-userid="@user.Id">
+                        <td>@user.Name</td>
+                        <td>@user.UserName</td>
+                        <td>@user.Email</td>
+                        <td>@user.PhoneNumber</td>
+                        <td>@user.Address</td>
+                        <td>
+                            @Html.ActionLink("Edit", "UpdateForm", "Home", new { id = user.Id }) |
+                            @Html.ActionLink("Delete", "Delete", "Home", new { id = user.Id }) |
+                            @Html.ActionLink("Details", "ReadUser", "Home", new { id = user.Id })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
